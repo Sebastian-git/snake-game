@@ -1,37 +1,27 @@
-/* 
-login.js
-
-This code handles the process so users can log in to Snake Squad using their Snap accounts on index.html. 
-Once logged in, the program redirects to game.html 
-It's mostly adapted from SnapKit documentation. There are only two places that you need to change. 
-*/
-
+// Javascript code for Snapchat login page
 window.snapKitInit = function() {
   var loginButtonIconId = "my-login-button-target";
-  // Mount Login Button
   snap.loginkit.mountButton(loginButtonIconId, {
     clientId:
-      "df72c33e-d692-416b-8428-e5c4ed3ac178" /*YOU CHANGE: Must be changed to the development client ID on snapckit*/,
+      "df72c33e-d692-416b-8428-e5c4ed3ac178",
     redirectURI:
-      "https://sebastian-snake-game.glitch.me/" /*YOU CHANGE: Must be changed to your glitch project's url AND added as the redirect URI on snapkit */,
+      "https://sebastian-snake-game.glitch.me/",
     scopeList: ["user.display_name", "user.bitmoji.avatar"],
-    //Once snapchat logs user in, this funciton is run:
+    
+    // Function called after login
     handleResponseCallback: function() {
       snap.loginkit.fetchUserInfo().then(function(data) {
-        //Once snapchat logs us in, we can...
-        //have access to user data. Inspect the web page to see this!...
-        console.log("User info:", data);
-        // store user data in localStorage...
+        // Store user data in local storage
         var bitmoji_avatar_url = data.data.me.bitmoji.avatar;
         localStorage.setItem("avatarurl", bitmoji_avatar_url);
-        //and redirect the user to the game.html
+        // Redirect to game's html page
         location.href = "game.html";
       });
     }
   });
 };
 
-/* This code is copy-pasted from SnapKit documentation and loads the Snap login SDK asynchronously.*/
+// Snap developer kit code from SnapKit documentation
 (function(d, s, id) {
   var js,
     sjs = d.getElementsByTagName(s)[0];
