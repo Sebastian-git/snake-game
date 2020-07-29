@@ -1,11 +1,3 @@
-<!-- 
-game.html
-
-This code displays what you see when you first load https://t1-snakesquad-completed.glitch.me/game.html, which 
-is mostly a HTML5 canvas (that the game will appear on). It relies on game.css for styling and game.js for interactivity. 
-
-You don't need to make any changes here. 
--->
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,7 +6,6 @@ You don't need to make any changes here.
   <body>
     <canvas width="600" height="600" id="game"></canvas>
     <div>
-      <!-- These are hidden elements that we will display in game.js -->
       <img
         id="avatar"
         src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
@@ -24,12 +15,8 @@ You don't need to make any changes here.
     </div>
     <script src="/game.js" defer></script>
     <div style="margin-left:30px;font-size:30px;">
-      <p id="score">
-        Score: 0
-      </p>
-      <button onclick="pauseGame()" class="button">
-        Pause
-      </button>
+      <p id="score"> Score: 0 </p>
+      <button onclick="pauseGame()" class="button"> Pause </button>
     </div>
   </body>
 </html>
