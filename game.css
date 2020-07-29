@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
   height: 100%;
   margin: 0;
   background: #B9DEED;
@@ -12,7 +11,4 @@ body {
 canvas {
   border: 1px solid white;
   background-image: url(https://us.123rf.com/450wm/yamabikay/yamabikay1703/yamabikay170300076/73479531-dark-green-paper-as-background-seamless-square-texture-tile-ready-high-quality-image-.jpg?ver=6);
-}
-button {
-
 }
