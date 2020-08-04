@@ -9,10 +9,6 @@ to the project on SnapKit.
 In order to play the game: you are a snake that you can control with your arrow keys. 
 The goal of the game is to eat as many apples as you can without accidentally eating yourself. 
 
-
-Your Project
-------------
-
 ### ← README.md
 
 That's this file, where you can tell people what this project does and how to read it.
